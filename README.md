@@ -13,3 +13,4 @@ DATES: DD/MM/YYYY
 10/06/2019 <br>
 	Added : Exams 2019 Spring Semester - subject: objectOrientedProgramming;<br>
 	Added : doubleToFraction code - Turns float numbers into fractions. Main class in : double.java<br>
+	Added : Polyonimic Derivatives - Finds first Derivative of a polyonym. Main class in PolyonimicDerivatives.java<br>

@@ -12,3 +12,4 @@ DATES: DD/MM/YYYY
 	Added : objectOriented Excercise 3 - Exceptions | exceptionHandling<br>
 10/06/2019 <br>
 	Added : Exams 2019 Spring Semester - subject: objectOrientedProgramming;<br>
+	Added : doubleToFraction code - Turns float numbers into fractions. Main class in : double.java<br>

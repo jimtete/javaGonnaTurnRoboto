@@ -14,3 +14,5 @@ DATES: DD/MM/YYYY
 	Added : Exams 2019 Spring Semester - subject: objectOrientedProgramming;<br>
 	Added : doubleToFraction code - Turns float numbers into fractions. Main class in : double.java<br>
 	Added : Polyonimic Derivatives - Finds first Derivative of a polyonym. Main class in PolyonimicDerivatives.java<br>
+12/06/2019 <br>
+	Added : panHellenic Exams | University Entrance Exams 2019, Information Technology, Excercise C <br>

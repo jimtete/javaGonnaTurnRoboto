@@ -16,3 +16,7 @@ DATES: DD/MM/YYYY
 	Added : Polyonimic Derivatives - Finds first Derivative of a polyonym. Main class in PolyonimicDerivatives.java<br>
 12/06/2019 <br>
 	Added : panHellenic Exams | University Entrance Exams 2019, Information Technology, Excercise C <br>
+16/06/2019 <br>
+	Added : reverseNumber | Finds the reverse number of an integer. (ex. 123 >> 321 )<br>
+	Added : circleRadius | Finds a circle's area, using the Radius<br>
+	

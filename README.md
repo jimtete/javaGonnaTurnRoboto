@@ -24,4 +24,5 @@ DATES: DD/MM/YYYY
 	Added : linearSystems | Using Gauss-Jordan method to find 3 unknown variables.<br>
 	Added : Object oriented > Inheritance Part 1 | Just a simple example of Superclasses and subclasses.<br>
 31/10/2019 <br>
-	Added : The Stack & The Queue | Introduction to Data Structures
+	Added : The Stack & The Queue | Introduction to Data Structures <br>
+	Added : Mathematics>recursiveSum | Finding the sum of a sequence of numbers until the last input is <=0. <br>

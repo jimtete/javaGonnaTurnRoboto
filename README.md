@@ -20,8 +20,8 @@ DATES: DD/MM/YYYY
 	Added : reverseNumber | Finds the reverse number of an integer. (ex. 123 >> 321 ).<br>
 	Added : circleRadius | Finds a circle's area, using the Radius.<br>
 	Added : numericSystems | Converts decimal integer numbers, into binary and octals.<br>
-20/06/2019
+20/06/2019 <br>
 	Added : linearSystems | Using Gauss-Jordan method to find 3 unknown variables.<br>
 	Added : Object oriented > Inheritance Part 1 | Just a simple example of Superclasses and subclasses.<br>
-31/10/2019
-	Added : The Stack | Introduction to Data Structures
+31/10/2019 <br>
+	Added : The Stack & The Queue | Introduction to Data Structures

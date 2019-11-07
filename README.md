@@ -26,3 +26,5 @@ DATES: DD/MM/YYYY
 31/10/2019 <br>
 	Added : The Stack & The Queue | Introduction to Data Structures <br>
 	Added : Mathematics>recursiveSum | Finding the sum of a sequence of numbers until the last input is <=0. <br>
+07/11/2019 <br>
+	Added : Musicline | A functional GUI for an application that changes the bass,midtones and tremple of a sound file. <br>

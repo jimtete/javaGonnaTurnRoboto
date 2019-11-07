@@ -1,5 +1,7 @@
 
+import com.sun.javafx.scene.control.SelectedCellsMap;
 import java.util.Hashtable;
+import javax.swing.ButtonGroup;
 import javax.swing.JLabel;
 
 /*
@@ -17,11 +19,62 @@ import javax.swing.JLabel;
  * @author user
  */
 public class NewJFrame extends javax.swing.JFrame {
-
+    
     /** Creates new form NewJFrame */
+    boolean selected[] ={true,false,false};
     public NewJFrame() {
         initComponents();
+        setupPresets();
+        ButtonGroup bgroup = new ButtonGroup();
+        bgroup.add(m0);
+        bgroup.add(m1);
+        bgroup.add(m2);
+        m0.setSelected(true);
+        
+        
     }
+    Presets pTable[] = new Presets[3];
+    
+    void setupPresets(){
+        pTable[0]=new Presets(0, 0, 0, 0, 0);
+        pTable[1]=new Presets(1, -1, 9, 0, 4);
+        pTable[2] = new Presets(2, 4, -2, 4, 2);
+    }
+    
+    void loadPresets(int b,int m,int t,int ba,int v){
+        slBalance.setValue(b);
+        slMidrange.setValue(m);
+        slTremble.setValue(t);
+        slBalance.setValue(ba);
+        slVolume.setValue(v);
+    }
+    
+    void storePresets(){
+        for (int i=0;i<3;i++){
+            if (selected[i]){
+                pTable[i].bass=slBass.getValue();
+                pTable[i].midrange=slMidrange.getValue();
+                pTable[i].tremple=slTremble.getValue();
+                pTable[i].balance=slBalance.getValue();
+                pTable[i].volume=slVolume.getValue();
+            }
+        }
+    }
+    
+    void showSliderValues(){
+        int b=slBass.getValue();
+        int m=slMidrange.getValue();
+        int t=slTremble.getValue();
+        int bl=slBalance.getValue();
+        String bal;
+        if (bl>0)
+            bal="Right "+ String.valueOf(bl);
+        else if (bl<0) bal="Left "+ String.valueOf(bl);
+        else bal = "Center";
+        int vol=slVolume.getValue();
+        jLabel6.setText("<html>Bass: "+b+"<br/>Midrange: "+m+"<br/>Tremble: "+t+"<br/>Balance: "+bal+"<br/>Volume: "+vol);
+    }
+    
     Hashtable table = new Hashtable();
     /** This method is called from within the constructor to
      * initialize the form.
@@ -44,9 +97,9 @@ public class NewJFrame extends javax.swing.JFrame {
         slTremble = new javax.swing.JSlider();
         slBalance = new javax.swing.JSlider();
         slVolume = new javax.swing.JSlider();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        m0 = new javax.swing.JRadioButton();
+        m1 = new javax.swing.JRadioButton();
+        m2 = new javax.swing.JRadioButton();
         bStore = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,7 +132,7 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.gridy = 4;
         getContentPane().add(lVolume, gridBagConstraints);
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setText("<html>Bass: 0<br/>Midrange: 0<br/>Tremble: 0<br/>Balance: Center<br/>Volume: 0</html>");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
@@ -93,6 +146,11 @@ public class NewJFrame extends javax.swing.JFrame {
         slBass.setPaintLabels(true);
         slBass.setPaintTicks(true);
         slBass.setValue(0);
+        slBass.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                slBassStateChanged(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridwidth = 2;
         getContentPane().add(slBass, gridBagConstraints);
@@ -104,6 +162,11 @@ public class NewJFrame extends javax.swing.JFrame {
         slMidrange.setPaintLabels(true);
         slMidrange.setPaintTicks(true);
         slMidrange.setValue(0);
+        slMidrange.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                slMidrangeStateChanged(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -117,6 +180,11 @@ public class NewJFrame extends javax.swing.JFrame {
         slTremble.setPaintLabels(true);
         slTremble.setPaintTicks(true);
         slTremble.setValue(0);
+        slTremble.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                slTrembleStateChanged(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -134,6 +202,11 @@ public class NewJFrame extends javax.swing.JFrame {
         slBalance.setPaintLabels(true);
         slBalance.setPaintTicks(true);
         slBalance.setValue(0);
+        slBalance.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                slBalanceStateChanged(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -145,31 +218,56 @@ public class NewJFrame extends javax.swing.JFrame {
         slVolume.setPaintLabels(true);
         slVolume.setPaintTicks(true);
         slVolume.setValue(0);
+        slVolume.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                slVolumeStateChanged(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 2;
         getContentPane().add(slVolume, gridBagConstraints);
 
-        jRadioButton1.setText("jRadioButton1");
+        m0.setText("M0");
+        m0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                m0ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        getContentPane().add(jRadioButton1, gridBagConstraints);
+        getContentPane().add(m0, gridBagConstraints);
 
-        jRadioButton2.setText("jRadioButton2");
+        m1.setText("M1");
+        m1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                m1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
-        getContentPane().add(jRadioButton2, gridBagConstraints);
+        getContentPane().add(m1, gridBagConstraints);
 
-        jRadioButton3.setText("jRadioButton3");
+        m2.setText("M2");
+        m2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                m2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
-        getContentPane().add(jRadioButton3, gridBagConstraints);
+        getContentPane().add(m2, gridBagConstraints);
 
         bStore.setText("Store");
+        bStore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bStoreActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -178,6 +276,51 @@ public class NewJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void m1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m1ActionPerformed
+       loadPresets(pTable[1].bass, pTable[1].midrange, pTable[1].tremple, pTable[1].balance, pTable[1].volume); // TODO add your handling code here:
+        selected[0]=false;
+        selected[1]=true;
+        selected[2]=false;
+    }//GEN-LAST:event_m1ActionPerformed
+
+    private void slBassStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slBassStateChanged
+        showSliderValues();
+    }//GEN-LAST:event_slBassStateChanged
+
+    private void slMidrangeStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slMidrangeStateChanged
+        showSliderValues();// TODO add your handling code here:
+    }//GEN-LAST:event_slMidrangeStateChanged
+
+    private void slTrembleStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slTrembleStateChanged
+        showSliderValues();// TODO add your handling code here:
+    }//GEN-LAST:event_slTrembleStateChanged
+
+    private void slBalanceStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slBalanceStateChanged
+        showSliderValues();// TODO add your handling code here:
+    }//GEN-LAST:event_slBalanceStateChanged
+
+    private void slVolumeStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_slVolumeStateChanged
+        showSliderValues();// TODO add your handling code here:
+    }//GEN-LAST:event_slVolumeStateChanged
+
+    private void m0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m0ActionPerformed
+        loadPresets(pTable[0].bass, pTable[0].midrange, pTable[0].tremple, pTable[0].balance, pTable[0].volume);
+        selected[2]=false;
+        selected[0]=true;
+        selected[1]=false;
+    }//GEN-LAST:event_m0ActionPerformed
+
+    private void m2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m2ActionPerformed
+        loadPresets(pTable[2].bass, pTable[2].midrange, pTable[2].tremple, pTable[2].balance, pTable[2].volume);
+        selected[0]=false;
+        selected[2]=true;
+        selected[1]=false;
+    }//GEN-LAST:event_m2ActionPerformed
+
+    private void bStoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bStoreActionPerformed
+        storePresets();
+    }//GEN-LAST:event_bStoreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,14 +360,14 @@ public class NewJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bStore;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JLabel lBalance;
     private javax.swing.JLabel lBass;
     private javax.swing.JLabel lMidrange;
     private javax.swing.JLabel lTremble;
     private javax.swing.JLabel lVolume;
+    private javax.swing.JRadioButton m0;
+    private javax.swing.JRadioButton m1;
+    private javax.swing.JRadioButton m2;
     private javax.swing.JSlider slBalance;
     private javax.swing.JSlider slBass;
     private javax.swing.JSlider slMidrange;

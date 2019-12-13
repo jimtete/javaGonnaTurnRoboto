@@ -28,3 +28,5 @@ DATES: DD/MM/YYYY
 	Added : Mathematics>recursiveSum | Finding the sum of a sequence of numbers until the last input is <=0. <br>
 07/11/2019 <br>
 	Added : Musicline | A functional GUI for an application that changes the bass,midtones and tremple of a sound file. <br>
+13/12/2019 <br>
+	Added : The LinkedList | Not properly working, Linked List testing.

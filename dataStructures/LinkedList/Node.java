@@ -18,9 +18,9 @@ public class Node {
         this(null,null);
     }
     
-    public Node(Object data,Node next){
-        data=this.data;
-        next=this.next;
+    public Node(Object d,Node n){
+        data=d;
+        next=n;
     }
     
     public Object getItem(){

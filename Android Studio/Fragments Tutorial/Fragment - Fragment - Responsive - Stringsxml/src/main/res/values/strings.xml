@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AP1_7</string>
+
+    <string-array name="programmingLanguages">
+        <item>Java</item>
+        <item>kotlin</item>
+        <item>python</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Java is a general-purpose programming language that is class-based, object-oriented,
+        and designed to have as few implementation dependencies as possible.</item>
+        <item>Kotlin is a cross-platform, statically typed, general-purpose programming
+        language with type inference.</item>
+        <item>Python is an interpretedm, high-level, general-purpose programming language.</item>
+    </string-array>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AP2_1</string>
+    <string-array name="animals">
+        <item>tiger</item>
+        <item>lion</item>
+        <item>dog</item>
+        <item>cat</item>
+        <item>elephant</item>
+        <item>bear</item>
+        <item>girafe</item>
+        <item>aligator</item>
+        <item>eagle</item>
+        <item>penguin</item>
+        <item>wolf</item>
+        <item>rabbit</item>
+    </string-array>
+</resources>

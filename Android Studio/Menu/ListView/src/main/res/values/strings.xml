@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ListView</string>
+    <string-array name="animals">
+        <item>Tiger</item>
+        <item>Lion</item>
+        <item>Dog</item>
+        <item>Cat</item>
+        <item>Elephant</item>
+        <item>Bear</item>
+        <item>Giraffe</item>
+        <item>Aligator</item>
+        <item>Eagle</item>
+        <item>Penguin</item>
+        <item>Wolf</item>
+        <item>Rabbit</item>
+    </string-array>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertSailorFragment"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INSERT SAILOR"
+        android:textAlignment="center"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/editText_insert_sailor_sid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="enter sid..." />
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/editText_insert_sailor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="enter name..."/>
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/editText_insert_sailor_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="enter rating..."/>
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/editText_insert_sailor_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="enter age..." />
+
+    <Button
+        android:layout_marginTop="24dp"
+        android:id="@+id/button_submit_sailor"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT" />
+</LinearLayout>

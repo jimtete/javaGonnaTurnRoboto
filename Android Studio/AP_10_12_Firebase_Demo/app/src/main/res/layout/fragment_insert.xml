@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertFragment"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:id="@+id/button_insert_sailor_fragment"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Insert sailor" />
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:id="@+id/button_insert_boat_fragment"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:text="Insert boat" />
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:id="@+id/button_insert_reservation_fragment"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:text="Insert reservation" />
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:id="@+id/button_query1_fragment"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="QUERY1" />
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:id="@+id/button_query2_fragment"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="QUERY2" />
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:id="@+id/button_query3_fragment"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="QUERY3" />
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:id="@+id/button_query4_fragment"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="QUERY4" />
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:id="@+id/button_query5_fragment"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="QUERY5"  />
+
+</LinearLayout>

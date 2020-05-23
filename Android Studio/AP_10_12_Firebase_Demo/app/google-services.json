@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "482903920653",
+    "firebase_url": "https://sailorreservesboat-aed75.firebaseio.com",
+    "project_id": "sailorreservesboat-aed75",
+    "storage_bucket": "sailorreservesboat-aed75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482903920653:android:ff58a13de786da34548544",
+        "android_client_info": {
+          "package_name": "com.example.ap_10_12_firebase_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482903920653-cqdaaf6k9l5t3ama7vcebr69j0klllpk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ap_10_12_firebase_demo",
+            "certificate_hash": "6b0c9a0b78856b7730d59218a5927d94a67a2449"
+          }
+        },
+        {
+          "client_id": "482903920653-ivlfmn97sik884cn9o7js9l16oigb0go.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwloiAstPcjt40NHoxckUEqLuiDlZXCUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482903920653-ivlfmn97sik884cn9o7js9l16oigb0go.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

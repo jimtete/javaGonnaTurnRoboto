@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertReserveFragment"
+    android:padding="8dp"
+    android:orientation="vertical"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INSERT RESERVATION" />
+
+    <EditText
+        android:layout_marginTop="24dp"
+        android:id="@+id/editText_insert_reserve_sid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="insert sid..." />
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/editText_insert_reserve_bid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="insert bid..." />
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/editText_insert_reserve_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="insert date..." />
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        android:id="@+id/submit_reserve"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT RESERVATION" />
+
+</LinearLayout>

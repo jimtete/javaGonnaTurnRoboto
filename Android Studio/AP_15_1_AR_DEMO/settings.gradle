@@ -1,0 +1,2 @@
+rootProject.name='AP_15_1_AR_DEMO'
+include ':app'
